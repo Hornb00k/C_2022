@@ -5,12 +5,25 @@ using namespace std;
 
 int main()
 {
-    int a, b;
+    int a, b, c, d;
     ofstream r2d2("c3po");
-    cout<<"Введите A и B (А<B)";
+    cout<<"Введите A и B";
     cin>>a>>b;
-    for(a;a<=b;a++){
-        r2d2<<(a*3)<<"\n";
+    if (a>b){
+        c=a;
+        d=b;
+        } else if (b>a){
+            c=b;
+            d=a;
+            } else {
+                cout<<"Число А равен В. Введите число заного";
+            }
+    for(d;d<=c;d++){
+        if (c==d){
+        r2d2<<(d*3);
+        } else {
+            r2d2<<(d*3)<<"\n";;
+        }
     }
     r2d2.close();    
    return 0;
