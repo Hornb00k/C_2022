@@ -5,16 +5,18 @@ using namespace std;
 
 int main()
 {
-    int a, i=0;
+    int a, i=0, *ip;
     char x[80];
     cout << "Ввод символов" << "\n";
     cin >> x;
+    cout<<"Результат - ";
     a = strlen(x);
     while (1){
-    x[i]=x[i]+1;
-    i++;
-    if(a==i) break;
+        ip=(int *) &x[i];
+        (*ip)++;
+        cout<<x[i];
+        if(a==i) break;
+        i++;
     }
-    cout<<"Результат - "<<x;
     return 0;
 }
