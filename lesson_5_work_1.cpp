@@ -2,20 +2,18 @@
 
 using namespace std ;
 
-void SquaredSum();
+float SquaredSum(float a, float b,float result)
+{
+    result=(a+b)*(a+b);
+    return result;
+}
 
 int main ()
 {
-    SquaredSum();    
-}
-
-void SquaredSum()
-{
-    float a,b,result;
+    float c,d,result;
     cout<<"Введите первое дробное число\n";
-    cin>>a;
+    cin>>c;
     cout<<"Введите второе дробное число\n";
-    cin>>b;
-    result=(a+b)*(a+b);
-    cout<<"Результат - "<<result<<"\n";
+    cin>>d;
+    cout<<"Результат - "<<SquaredSum(c,d,result)<<"\n";
 }
