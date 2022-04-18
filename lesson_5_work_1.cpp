@@ -1,8 +1,15 @@
 #include <iostream>
 
-using namespace std;
+using namespace std ;
 
-int main()
+void SquaredSum();
+
+int main ()
+{
+    SquaredSum();    
+}
+
+void SquaredSum()
 {
     float a,b,result;
     cout<<"Введите первое дробное число\n";
